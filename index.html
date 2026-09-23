@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JCH Sneakers</title>
+<style>
+body{margin:0;background:#120f0c;color:#f1e6d0;font-family:Arial,sans-serif}header{padding:16px 5%;background:#100d0b;border-bottom:1px solid #3a3027;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;position:sticky;top:0}nav button,.btn{background:transparent;color:#f1e6d0;border:1px solid #3a3027;padding:9px 13px;border-radius:8px;cursor:pointer;margin:3px}.logo{font-size:25px;font-weight:bold;letter-spacing:3px}.sub{font-size:10px;color:#b9ab94;letter-spacing:2px}main{max-width:1200px;margin:auto;padding:30px 5% 70px}.page{display:none}.page.active{display:block}.hero{min-height:520px;padding:50px;border:1px solid #3a3027;border-radius:18px;background-image:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.18)),url("fondo_inicio_JCH.png");background-size:cover;background-position:center;background-repeat:no-repeat}.hero h1{font-size:clamp(40px,7vw,80px);margin:15px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}.card,.empty{border:1px solid #3a3027;border-radius:14px;padding:16px;background:#1d1814}.photo{height:190px;border-radius:10px;background:#2b241e;display:flex;align-items:center;justify-content:center;font-size:60px;margin-bottom:14px}.empty{min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;color:#b9ab94}.price{font-size:20px;font-weight:bold}.muted{color:#b9ab94}.detail{display:grid;grid-template-columns:1fr 1fr;gap:30px}.detail .photo{height:430px;font-size:100px}@media(max-width:700px){.detail{grid-template-columns:1fr}}
+</style></head><body>
+<header><div><div class="logo">JCH</div><div class="sub">DESDE 2026 · SNEAKERS</div></div>
+<nav>
+<button onclick="go('inicio')">Inicio</button><button onclick="go('catalogo')">Catálogo</button><button onclick="go('novedades')">Novedades</button><button onclick="go('ofertas')">Ofertas</button><button onclick="go('colecciones')">Colecciones</button><button onclick="go('nosotros')">Nosotros</button><button onclick="go('contacto')">Contacto</button><button onclick="go('carrito')">Carrito (<span id="n">0</span>)</button>
+</nav></header><main>
+
+<section id="inicio" class="page">
+  <div style="text-align:center;padding:58px 20px 38px;background:linear-gradient(135deg,rgba(18,13,10,.94),rgba(48,35,25,.86));border:1px solid #6f5d43;border-radius:20px;box-shadow:0 18px 45px rgba(0,0,0,.28);">
+    <div style="letter-spacing:5px;font-size:14px;color:#cdb98d;margin-bottom:12px;">JCH SNEAKERS · DESDE 2026</div>
+    <h1 style="font-size:48px;line-height:1.05;margin:0 0 14px;color:#eadbbd;">ESTILO EN CADA PASO</h1>
+    <p style="max-width:650px;margin:0 auto 24px;color:#ddd0bc;font-size:17px;line-height:1.7;">
+      Descubre modelos de zapatillas pensados para acompañar tu estilo todos los días.
+    </p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <button class="btn" onclick="go('catalogo')">👟 VER CATÁLOGO</button>
+      <button class="btn" onclick="go('ofertas')">🔥 VER OFERTAS</button>
+      <a class="btn" href="https://wa.me/51988735327?text=Hola%20JCH%2C%20quiero%20consultar%20por%20sus%20zapatillas." target="_blank" rel="noopener">💬 WHATSAPP</a>
+    </div>
+  </div>
+
+  <div style="margin-top:34px;">
+    <h2 style="text-align:center;color:#e8d8b8;margin-bottom:18px;">MODELOS DESTACADOS</h2>
+    <div class="grid">
+      <div class="empty" style="text-align:center;padding:24px;">
+        <div style="font-size:58px;">👟</div><h3>Urban 01</h3><p>S/ 129</p>
+        <button class="btn" onclick="go('catalogo')">VER PRODUCTO</button>
+      </div>
+      <div class="empty" style="text-align:center;padding:24px;">
+        <div style="font-size:58px;">👟</div><h3>Classic 02</h3><p>S/ 149</p>
+        <button class="btn" onclick="go('catalogo')">VER PRODUCTO</button>
+      </div>
+      <div class="empty" style="text-align:center;padding:24px;">
+        <div style="font-size:58px;">👟</div><h3>Sport 04</h3><p>S/ 199</p>
+        <button class="btn" onclick="go('catalogo')">VER PRODUCTO</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:30px;padding:25px;background:#211914;border:1px solid #5f4e39;border-radius:16px;text-align:center;">
+    <h2 style="color:#e8d8b8;margin-top:0;">BIENVENIDO A JCH</h2>
+    <p style="max-width:700px;margin:0 auto;color:#d8cbb7;line-height:1.7;">
+      Explora nuestra colección de zapatillas y encuentra el modelo que mejor se adapte a tu estilo.
+    </p>
+  </div>
+
+  <div class="grid" style="margin-top:22px;">
+    <div class="empty" style="text-align:center;padding:20px;"><div style="font-size:28px;">🚚</div><b>ATENCIÓN PERSONALIZADA</b><p>Te ayudamos con tus consultas.</p></div>
+    <div class="empty" style="text-align:center;padding:20px;"><div style="font-size:28px;">📱</div><b>PEDIDOS POR WHATSAPP</b><p>Consulta y realiza tu pedido.</p></div>
+    <div class="empty" style="text-align:center;padding:20px;"><div style="font-size:28px;">👟</div><b>VARIEDAD DE MODELOS</b><p>Urbanas, casuales y deportivas.</p></div>
+  </div>
+</section>
+
+<section id="catalogo" class="page"><h1>Catálogo</h1><p class="muted">Aquí podrás agregar todos tus modelos y fotos.</p><div id="products" class="grid"></div><h2>Más productos</h2><div class="empty">Espacio reservado para nuevos modelos, fotos, precios y tallas.</div></section>
+
+<section id="producto" class="page"><div class="detail"><div class="photo">👟</div><div><div id="tag" class="muted"></div><h1 id="name"></h1><div id="price" class="price"></div><p class="muted">Aquí irá la descripción, materiales, colores y características.</p><h3>Tallas</h3><div id="sizes"></div><button class="btn" onclick="add()">AGREGAR AL CARRITO</button><button class="btn" onclick="wa()">COMPRAR POR WHATSAPP</button></div></div><h2>Fotos adicionales</h2><div class="grid"><div class="empty">Foto 2</div><div class="empty">Foto 3</div><div class="empty">Foto 4</div></div></section>
+
+<section id="novedades" class="page"><h1>Novedades</h1><p class="muted">Página reservada para lanzamientos.</p><div class="grid"><div class="empty">Nuevo lanzamiento 1</div><div class="empty">Nuevo lanzamiento 2</div><div class="empty">Nuevo lanzamiento 3</div><div class="empty">Nuevo lanzamiento 4</div></div></section>
+
+<section id="ofertas" class="page"><h1>Ofertas</h1><p class="muted">Página reservada para descuentos y promociones.</p><div class="grid"><div class="empty">Oferta destacada</div><div class="empty">Oferta 2</div><div class="empty">Oferta 3</div></div></section>
+
+<section id="colecciones" class="page"><h1>Colecciones</h1><p class="muted">Espacio para colecciones por temporada o estilo.</p><div class="grid"><div class="empty">Colección 2026</div><div class="empty">Colección Urbana</div><div class="empty">Colección Deportiva</div><div class="empty">Nueva colección</div></div></section>
+
+<section id="nosotros" class="page"><h1>Sobre JCH</h1><p class="muted">Página reservada para historia, misión, visión y valores.</p><div class="empty">Presentación de la marca</div><h2>Galería</h2><div class="grid"><div class="empty">Foto</div><div class="empty">Foto</div><div class="empty">Foto</div></div></section>
+
+<section id="contacto" class="page">
+<h1>Contacto</h1>
+<p class="muted">WhatsApp: 988 735 327 · Email: ventas@jch.com</p>
+<div class="grid">
+  <div class="empty">Formulario</div>
+  <div class="empty" style="text-align:center;padding:28px;background:linear-gradient(135deg,#201914,#33271d);border:1px solid #806e50;border-radius:16px;">
+    <div style="font-size:34px;margin-bottom:10px;">💬</div>
+    <h2 style="margin:0 0 8px;color:#e8d8b8;">¿Tienes alguna consulta?</h2>
+    <p style="margin:0 0 16px;color:#d8cbb7;line-height:1.6;">
+      Escríbenos por WhatsApp y te ayudaremos con modelos, tallas y precios.
+    </p>
+    <a class="btn" href="https://wa.me/51988735327?text=Hola%20JCH%2C%20quiero%20hacer%20una%20consulta%20sobre%20sus%20zapatillas." target="_blank" rel="noopener">
+      📱 WhatsApp JCH<br>
+      <span style="font-size:16px;">988 735 327</span>
+    </a>
+  </div>
+</div>
+</section>
+
+<section id="carrito" class="page"><h1>Carrito</h1><div id="cart"></div><h2 id="total">Total: S/ 0</h2><button class="btn" onclick="checkout()">PEDIR POR WHATSAPP</button></section>
+</main><footer style="border-top:1px solid #3a3027;padding:30px;text-align:center;color:#b9ab94">JCH SNEAKERS · DESDE 2026</footer>
+<script>
+const P=[['Urban 01',129,'Urbanas'],['Classic 02',149,'Casuales'],['Street 03',169,'Urbanas'],['Sport 04',199,'Deportivas'],['Oferta 05',99,'Ofertas'],['Casual 06',139,'Casuales']];
+let sel=null,cart=[];
+function go(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');if(id==='carrito')render();scrollTo(0,0)}
+function openP(i){sel=P[i];document.getElementById('name').textContent=sel[0];document.getElementById('price').textContent='S/ '+sel[1];document.getElementById('tag').textContent=sel[2];document.getElementById('sizes').innerHTML=[38,39,40,41,42].map(s=>'<button class="btn" onclick="sel[3]= '+s+'">Talla '+s+'</button>').join('');go('producto')}
+function add(){if(sel){cart.push(sel);document.getElementById('n').textContent=cart.length;go('carrito')}}
+function render(){document.getElementById('cart').innerHTML=cart.length?cart.map((p,i)=>'<p>'+p[0]+' — S/ '+p[1]+' <button class="btn" onclick="cart.splice('+i+',1);render()">Quitar</button></p>').join(''):'<div class="empty">Tu carrito está vacío.</div>';document.getElementById('total').textContent='Total: S/ '+cart.reduce((a,p)=>a+p[1],0);document.getElementById('n').textContent=cart.length}
+function wa(){if(sel)window.open('https://wa.me/51988735327?text='+encodeURIComponent('Hola JCH, quiero comprar '+sel[0]+' por S/ '+sel[1]),'_blank')}
+function checkout(){if(cart.length)window.open('https://wa.me/51988735327?text='+encodeURIComponent('Hola JCH, quiero hacer un pedido: '+cart.map(p=>p[0]+' S/ '+p[1]).join(', ')+' | Total S/ '+cart.reduce((a,p)=>a+p[1],0)),'_blank')}
+document.getElementById('products').innerHTML=P.map((p,i)=>'<div class="card"><div class="photo">👟</div><div class="muted">'+p[2]+'</div><h3>'+p[0]+'</h3><div class="price">S/ '+p[1]+'</div><br><button class="btn" onclick="openP('+i+')">VER PRODUCTO</button></div>').join('');
+</script></body></html>
